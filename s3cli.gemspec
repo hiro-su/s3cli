@@ -22,4 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_dependency "aws-sdk", "~> 1.32.0"
   spec.add_dependency "thor", "~> 0.18.1"
+  spec.add_dependency "parallel", "~> 0.9.2"
+  spec.add_dependency "ruby-progressbar", "~> 1.4.1"
 end

@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'pathname'
+
+lib = Pathname.new(__FILE__).dirname.join('..', 'lib').expand_path
+$LOAD_PATH.unshift lib.to_s
+
+require "s3cli"
+
+S3cli::CLI.start

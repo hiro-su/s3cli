@@ -74,7 +74,8 @@ module S3cli
       retry_count = 0
       Parallel.each(entries,
                     in_threads: @max_threads,
-                    finish: lambda {|item, i| progress.increment}) do |obj|
+                    finish: lambda {|item, i, result| progress.increment}
+                   ) do |obj|
         begin
           if options[:verbose] || options[:size]
             content_length = obj.content_length

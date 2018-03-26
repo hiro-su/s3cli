@@ -42,7 +42,7 @@ module S3cli
     end
 
     def error_format(ex)
-      puts "ERROR: #{ex}\n\n#{ex.backtrace.join('')}"
+      puts "ERROR: #{ex}\n\n#{ex.backtrace.join(%Q(\n))}"
     end
   end
 end
